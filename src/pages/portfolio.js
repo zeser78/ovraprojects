@@ -6,13 +6,14 @@ import SEO from "../components/seo"
 import Slide2 from "../components/slide2"
 import Slide3 from "../components/slide3"
 import Image from "../components/image"
+import Pic1 from "../components/gallery/pic1"
 
 const Portfolio = () => (
   <Layout>
     <SEO title="Portfolio" />
     <div className="parent">
       <div className="box">
-        <Image />
+        <Pic1 />
       </div>
       <div className="box">
         <Slide2 />
