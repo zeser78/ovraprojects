@@ -24,9 +24,9 @@ body {
 /* .menu a:active {
   color: aqua;
 } */
-/* .menu a:visited {
+.menu a:visited {
   color: hsl(0, 0%, 10%);
-} */
+}
 
 /* carousel */
 
@@ -74,7 +74,7 @@ body {
 }
 .active {
   font-weight: bold;
-  color: blue;
+  /* color: blue; */
   width: 100%;
   height: 100%;
   transition: transform 250ms ease-in;
@@ -148,14 +148,81 @@ body {
 
 .parent {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  max-height: 1200px;
 }
 .box {
   /* flex: 1 1 150px;  Stretching: */
   flex: 1 1 33%; /*  No stretching: */
   /* margin: 5px; */
-  height: 100%;
-  width: 100%;
-  /* object-fit: cover; */
+  /* max-width: 33%; */
+  max-height: 350px;
+  width: 33.33%;
+  object-fit: cover;
+}
+
+.box:nth-child(odd) {
+  max-height: 400px;
+}
+
+@media screen and (max-width: 1200px) {
+  .parent {
+    height: 1000px;
+  }
+  .box {
+    max-height: 300px;
+  }
+  .box:nth-child(odd) {
+    max-height: 330px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .parent {
+    height: 900px;
+  }
+  .box {
+    max-height: 250px;
+  }
+  .box:nth-child(odd) {
+    max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .parent {
+    height: 900px;
+  }
+  .box {
+    max-height: 220px;
+  }
+  .box:nth-child(odd) {
+    max-height: 250px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .parent {
+    height: auto;
+  }
+  .box {
+    width: 50%;
+    max-height: 220px;
+  }
+  .box:nth-child(odd) {
+    max-height: 250px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .parent {
+    height: auto;
+  }
+  .box {
+    width: 50%;
+    max-height: 180px;
+  }
+  .box:nth-child(odd) {
+    max-height: 220px;
+  }
 }
