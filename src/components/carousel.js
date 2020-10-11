@@ -27,8 +27,8 @@ const Carousel = ({ children }) => {
     return () => clearInterval(slideTime)
   }, [activeSlide])
 
-  const moveLeft = Math.max(0, activeSlide - 1)
-  const moveRight = Math.min(children.length - 1, activeSlide + 1)
+  // const moveLeft = Math.max(0, activeSlide - 1)
+  // const moveRight = Math.min(children.length - 1, activeSlide + 1)
 
   return (
     <React.Fragment>
@@ -40,13 +40,19 @@ const Carousel = ({ children }) => {
             return (
               <div
                 key={i}
-                className={`carousel__track fade ${
-                  active ? "active" : "hidden"
-                }`}
+                className={`carousel__track ${active ? "active" : "hidden"}`}
                 ref={active ? activeSlideRef : null}
               >
                 {child}
               </div>
+              // <div
+              //   className={`slide ${active ? "active" : ""}`}
+              //   ref={active ? activeSlideRef : null}
+              //   id={`slide-${i}`}
+              //   key={`slide-${i}`}
+              // >
+              //   {child}
+              // </div>
             )
           })}
         </div>

@@ -10,16 +10,12 @@ import Slide2 from "../components/slide2"
 import Slide3 from "../components/slide3"
 import slide1 from "../images/slide-1.jpg"
 import slide2 from "../images/slide-2.jpg"
+import Deck from "../components/deck"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Carousel
-    // showStatus={false}
-    // showThumbs={false}
-    // autoPlay={true}
-    // infiniteLoop={true}
-    >
+    <Carousel>
       <div className="carousel__slide">
         <Image />
         {/* <img className="carousel-image" src={slide1} /> */}
