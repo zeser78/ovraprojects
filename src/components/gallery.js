@@ -30,7 +30,7 @@ const Gallery = () => {
           <div className="box">
             <Img
               fluid={item.node.image.childImageSharp.fluid}
-              style={{ position: `relative` }}
+              style={{ position: `relative`, minHeight: `100%`  }}
             />
           </div>
         )

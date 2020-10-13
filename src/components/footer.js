@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="section-footer">
         <div>
           <h3>
-            Social Media:
+    
             <span style={{ padding: `5px` }}>
               <a href="/" target="_blank">
-                <FontAwesomeIcon icon={faFacebook} />
+                <FontAwesomeIcon icon={faFacebook} size={"2x"}/>
               </a>
             </span>
             {/* <span style={{ padding: `5px` }}>
@@ -21,7 +21,7 @@ const Footer = () => {
             </span> */}
             <span style={{ padding: `5px` }}>
               <a href="/" target="_blank">
-                <FontAwesomeIcon icon={faInstagram} />
+                <FontAwesomeIcon icon={faInstagram} size={"2x"} />
               </a>
             </span>
           </h3>
