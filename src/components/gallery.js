@@ -12,7 +12,7 @@ const Gallery = () => {
             description
             image {
               childImageSharp {
-                fluid {
+                fluid(quality: 70) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -25,9 +25,10 @@ const Gallery = () => {
 
   return (
     <div className="parent">
-      {data.allGalleryJson.edges.map(item => {
+      {data.allGalleryJson.edges.map((item, index) => {
+       
         return (
-          <div className="box">
+          <div key={index} className={`box box-${index}`}>
             <Img
               fluid={item.node.image.childImageSharp.fluid}
               style={{ position: `relative`, minHeight: `100%`  }}
