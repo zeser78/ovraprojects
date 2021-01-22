@@ -12,7 +12,7 @@ const Gallery = () => {
             description
             image {
               childImageSharp {
-                fluid(quality: 70) {
+                fluid(quality: 90) {
                   ...GatsbyImageSharpFluid
                 }
               }

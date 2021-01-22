@@ -45,10 +45,10 @@ const Header = () => (
           <Link to="/portfolio">Portfolio</Link>
         </div>
         <div>
-          <Link>Team</Link>
+          <Link to="/">Team</Link>
         </div>
         <div>
-          <Link>Contact</Link>
+          <Link to="/">Contact</Link>
         </div>
       </div>
     </div>
